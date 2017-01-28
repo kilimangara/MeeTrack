@@ -6,10 +6,14 @@ import com.nikitazlain.meetrack.entity.BaseResponse;
 import com.nikitazlain.meetrack.entity.Info;
 import com.nikitazlain.meetrack.entity.User;
 
+import java.util.Map;
+
 import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import rx.Observable;
 
@@ -29,5 +33,9 @@ public interface RestService {
 
     @GET("/api/account/")
     Observable<BaseResponse<User>> getOwnAccount(@Header("Authorization") String token);
+
+    @FormUrlEncoded
+    @PATCH("api/account/")
+    Observable<BaseResponse<User>> patchOwnAccount(@Header("Authorization") String token , @FieldMap Map<String, String> data);
 
 }

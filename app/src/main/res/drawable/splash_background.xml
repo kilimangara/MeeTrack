@@ -2,8 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@color/white"/>
-    <item android:drawable="@drawable/logolarge"
+    <item android:drawable="@drawable/ic_meetrack"
         android:gravity="center">
-
     </item>
 </layer-list>

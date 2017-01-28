@@ -11,14 +11,14 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.example.nikitok.metrack.MetrackApplication"
+        android:name="com.nikitazlain.meetrack.MetrackApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_meetrack"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.nikitok.metrack.LauncherActivity"
+            android:name="com.nikitazlain.meetrack.LauncherActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.nikitok.metrack.LoginActivity"
+            android:name="com.nikitazlain.meetrack.LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />

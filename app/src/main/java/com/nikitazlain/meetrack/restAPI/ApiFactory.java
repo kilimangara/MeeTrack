@@ -17,7 +17,6 @@ public class ApiFactory {
 
 
     private ApiFactory(){
-
     }
 
     public static ApiFactory getInstance(){
