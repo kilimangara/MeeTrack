@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nikitok.metrack.LoginFragments.CodeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input yout code here"
+        android:id="@+id/label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:maxLength="5"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/label"
+        android:background="@drawable/edstroke"
+        android:id="@+id/confirmCode"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can resend code in:30 seconds"
+        android:layout_below="@+id/confirmCode"
+        android:layout_marginTop="16dp"
+        android:id="@+id/label1"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resend"
+        android:text="Resend"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:layout_below="@+id/confirmCode"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

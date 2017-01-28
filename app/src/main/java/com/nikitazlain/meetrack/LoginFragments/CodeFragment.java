@@ -1,0 +1,54 @@
+package com.nikitazlain.meetrack.LoginFragments;
+
+
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.example.nikitok.metrack.R;
+import com.nikitazlain.meetrack.LoginActivity;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class CodeFragment extends Fragment {
+    EditText edCode;
+    String phone;
+
+
+    public CodeFragment() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_code, container, false);
+        phone = getArguments().getString(LoginActivity.PHONE_KEY);
+        final TextView tvlabel = (TextView) view.findViewById(R.id.label1);
+        final TextView tvResend = (TextView) view.findViewById(R.id.resend);
+        edCode = (EditText) view.findViewById(R.id.confirmCode);
+        new CountDownTimer(30000, 1000){
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                tvlabel.setText("You can resend code:"+millisUntilFinished/1000+" seconds");
+            }
+
+            @Override
+            public void onFinish() {
+                tvlabel.setVisibility(View.GONE);
+                tvResend.setVisibility(View.VISIBLE);
+            }
+        };
+
+        return view;
+    }
+
+}
