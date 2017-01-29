@@ -13,14 +13,23 @@ import android.view.View;
 import com.example.nikitok.metrack.R;
 import com.nikitazlain.meetrack.LoginFragments.CreatingUserFrament;
 import com.nikitazlain.meetrack.LoginFragments.PhoneFragment;
+import com.nikitazlain.meetrack.layoutBinder.Layout;
+import com.nikitazlain.meetrack.routers.LoginRouter;
+import com.nikitazlain.meetrack.ui.activity.BaseActivity;
 
-public class LoginActivity extends AppCompatActivity {
+import butterknife.BindView;
+
+@Layout(id = R.layout.activity_login)
+public class LoginActivity extends BaseActivity implements LoginRouter {
     public static final String PHONE_KEY="phone";
     public static final String FRAGMENT_KEY="fragment";
     public static final int PHONE_FRAGMENT=0;
     public static final int CODE_FRAGMENT=1;
     public static final int CREATING_USER_FRAGMENT=2;
     public static final int PATCHIN_FRAGMENT=3;
+
+    @BindView(R.id.toolbar)
+    private Toolbar toolbar;
 
     private PhoneFragment phoneFragment;
 
@@ -29,9 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
         fragmentManager = getSupportFragmentManager();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         phoneFragment = new PhoneFragment();
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
@@ -47,17 +54,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.logn_menu, menu);
@@ -106,8 +102,24 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
-   private void sendPhone(){
-   }
+    @Override
+    public void sendPhone(){
+    }
+
+    @Override
+    public void auth() {
+
+    }
+
+    @Override
+    public void register() {
+
+    }
+
+    @Override
+    public void goBack() {
+
+    }
 
 
     @Override

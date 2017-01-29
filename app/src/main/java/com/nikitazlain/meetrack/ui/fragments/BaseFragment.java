@@ -28,7 +28,7 @@ public abstract class BaseFragment extends Fragment {
         if(!clazz.isAnnotationPresent(Layout.class)) throw new RuntimeException("No layout id");
         Annotation annotation = clazz.getAnnotation(Layout.class);
         Layout layout =(Layout) annotation;
-        View view = inflater.inflate(layout.id(), null);
+        View view = inflater.inflate(layout.id(),container, false);
         unbinder= ButterKnife.bind(this, view);
         return view;
     }

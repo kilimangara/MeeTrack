@@ -12,11 +12,11 @@ import rx.Observable;
 
 public class UserProvider {
 
-    public Observable<BaseResponse<User>> getMe(String token){
+    public static Observable<BaseResponse<User>> getMe(String token){
         return ApiFactory.getInstance().getService().getOwnAccount(token);
     }
 
-    public Observable<BaseResponse<User>> patchMe(String token, Map<String, String> data){
+    public static Observable<BaseResponse<User>> patchMe(String token, Map<String, String> data){
         return ApiFactory.getInstance().getService().patchOwnAccount(token, data);
     }
 

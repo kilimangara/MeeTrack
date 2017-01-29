@@ -1,13 +1,14 @@
 package com.nikitazlain.meetrack.presenters;
 
-/**
- * Created by nikitazlain on 28.01.17.
- */
+
+import com.nikitazlain.meetrack.interactors.BaseInteractor;
 
 public abstract class BasePresenter<View, Router> {
     private View view;
 
     private Router router;
+
+    public BaseInteractor interactor;
 
     public abstract void onStart();
 
@@ -27,5 +28,9 @@ public abstract class BasePresenter<View, Router> {
 
     public void setRouter(Router router) {
         this.router = router;
+    }
+
+    public void switchInteractor(BaseInteractor interactor){
+        this.interactor = interactor;
     }
 }

@@ -11,5 +11,6 @@ public class MetrackApplication extends Application {
     public void onCreate() {
         super.onCreate();
         ApiFactory.getInstance().init();
+        PreferenceHelper.getInstance().init(this);
     }
 }
