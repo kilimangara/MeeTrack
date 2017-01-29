@@ -12,12 +12,19 @@ import android.widget.TextView;
 
 import com.example.nikitok.metrack.R;
 import com.nikitazlain.meetrack.LoginActivity;
+import com.nikitazlain.meetrack.layoutBinder.Layout;
+import com.nikitazlain.meetrack.views.LoginViews;
+
+import butterknife.BindView;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CodeFragment extends Fragment {
+@Layout(id =R.layout.fragment_code)
+public class CodeFragment extends Fragment implements LoginViews {
+    @BindView(R.id.confirmCode)
     EditText edCode;
+
     String phone;
 
 
@@ -46,9 +53,18 @@ public class CodeFragment extends Fragment {
                 tvlabel.setVisibility(View.GONE);
                 tvResend.setVisibility(View.VISIBLE);
             }
-        };
+        }.start();
 
         return view;
     }
 
+    @Override
+    public void showError(String error) {
+
+    }
+
+    @Override
+    public void showSnackbar(String notify) {
+
+    }
 }

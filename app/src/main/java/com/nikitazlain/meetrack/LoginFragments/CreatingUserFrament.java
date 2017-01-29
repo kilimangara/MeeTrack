@@ -8,10 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.nikitok.metrack.R;
+import com.nikitazlain.meetrack.layoutBinder.Layout;
 
 /**
  * A simple {@link Fragment} subclass.
  */
+@Layout(id =R.layout.fragment_creating_user_frament)
 public class CreatingUserFrament extends Fragment {
 
 

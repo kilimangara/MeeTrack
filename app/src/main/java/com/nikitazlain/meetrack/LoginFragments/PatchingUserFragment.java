@@ -1,18 +1,19 @@
 package com.nikitazlain.meetrack.LoginFragments;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.example.nikitok.metrack.R;
+import com.nikitazlain.meetrack.layoutBinder.Layout;
+import com.nikitazlain.meetrack.presenters.BasePresenter;
+import com.nikitazlain.meetrack.ui.fragments.BaseFragment;
+import com.nikitazlain.meetrack.views.LoginViews;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PatchingUserFragment extends Fragment {
+@Layout(id = R.layout.fragment_patching_user)
+public class PatchingUserFragment extends BaseFragment implements LoginViews {
 
 
     public PatchingUserFragment() {
@@ -21,10 +22,17 @@ public class PatchingUserFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_patching_user, container, false);
+    public BasePresenter getPresenter() {
+        return null;
     }
 
+    @Override
+    public void showError(String error) {
+
+    }
+
+    @Override
+    public void showSnackbar(String notify) {
+
+    }
 }
