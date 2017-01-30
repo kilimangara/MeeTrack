@@ -5,6 +5,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 
 import com.example.nikitok.metrack.R;
+import com.nikitazlain.meetrack.entity.ErrorResponse;
 import com.nikitazlain.meetrack.layoutBinder.Layout;
 import com.nikitazlain.meetrack.presenters.BasePresenter;
 import com.nikitazlain.meetrack.ui.fragments.BaseFragment;
@@ -37,7 +38,7 @@ public class PhoneFragment extends BaseFragment implements LoginViews {
 
 
     @Override
-    public void showError(String error) {
+    public void showError(ErrorResponse errorResponse) {
 
     }
 

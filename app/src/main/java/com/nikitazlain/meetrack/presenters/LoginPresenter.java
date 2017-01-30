@@ -7,7 +7,6 @@ import com.nikitazlain.meetrack.views.LoginViews;
 
 public class LoginPresenter extends BasePresenter<LoginViews, LoginRouter> {
 
-
     @Override
     public void onStart() {
 

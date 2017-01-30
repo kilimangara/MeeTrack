@@ -14,6 +14,8 @@ import com.example.nikitok.metrack.R;
 import com.nikitazlain.meetrack.LoginFragments.CreatingUserFrament;
 import com.nikitazlain.meetrack.LoginFragments.PhoneFragment;
 import com.nikitazlain.meetrack.layoutBinder.Layout;
+import com.nikitazlain.meetrack.presenters.BasePresenter;
+import com.nikitazlain.meetrack.presenters.LoginPresenter;
 import com.nikitazlain.meetrack.routers.LoginRouter;
 import com.nikitazlain.meetrack.ui.activity.BaseActivity;
 
@@ -35,6 +37,7 @@ public class LoginActivity extends BaseActivity implements LoginRouter {
 
     private int currentFragment;
     public FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,6 +107,7 @@ public class LoginActivity extends BaseActivity implements LoginRouter {
     }
     @Override
     public void sendPhone(){
+
     }
 
     @Override
@@ -132,5 +136,7 @@ public class LoginActivity extends BaseActivity implements LoginRouter {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("mytags", "activity destroyed");
+
     }
+
 }

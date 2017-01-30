@@ -8,6 +8,8 @@ public abstract class BasePresenter<View, Router> {
 
     private Router router;
 
+    public BasePresenter(){}
+
     public BaseInteractor interactor;
 
     public abstract void onStart();

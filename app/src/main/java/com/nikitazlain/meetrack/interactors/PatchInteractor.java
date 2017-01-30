@@ -13,9 +13,9 @@ import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class LoginInteractor extends BaseInteractor<User,BaseResponse<User>> {
+public class PatchInteractor extends BaseInteractor<User,BaseResponse<User>> {
 
-    public LoginInteractor() {
+    public PatchInteractor() {
         super(AndroidSchedulers.mainThread(), Schedulers.computation());
     }
 
